@@ -1,0 +1,13 @@
+*.mode1v3
+*.perspectivev3
+*.pbxuser
+.DS_Store
+build/
+CordovaLib/CordovaLib.xcodeproj/xcuserdata/
+CordovaLib/CordovaLib.xcodeproj/xcuserdata/
+Pods/Pods.xcodeproj/xcuserdata/
+WNShangCheng.xcodeproj/xcuserdata/
+WNShangCheng.xcworkspace/xcuserdata/
+WNShangCheng.xcworkspace/xcshareddata/
+www/
+DerivedData/

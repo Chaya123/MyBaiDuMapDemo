@@ -3,9 +3,8 @@
 
 ![image](https://github.com/Chaya123/MyBaiDuMapDemo/blob/master/MyBaiDuMapDemo/ScreenShots/IMG_0091.jpg)
 
-![image](https://github.com/Chaya123/MyBaiDuMapDemo/blob/master/MyBaiDuMapDemo/ScreenShots/IMG_0091.jpg)
+![image](https://github.com/Chaya123/MyBaiDuMapDemo/blob/master/MyBaiDuMapDemo/ScreenShots/IMG_0092.jpg)
 
-![image](https://github.com/Chaya123/MyBaiDuMapDemo/blob/master/MyBaiDuMapDemo/ScreenShots/IMG_0091.jpg)
 
 
 

@@ -43,6 +43,8 @@
 //搜索条
 @property(nonatomic,strong)UITextField  *searchTextField;
 
+@property(nonatomic,assign)BOOL isFirstLocation;//是否是第一次加载
+
 @end
 
 @implementation AddressMapSelectViewController
@@ -52,6 +54,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor=kBackColor;
+    self.isFirstLocation = YES;
     [self createMapUI];
 }
 - (void)createMapUI{
@@ -76,6 +79,7 @@
     self.mapView.delegate = nil;
     self.geoCodeSearch.delegate = nil;
     self.cityPoiSearch.delegate = nil;
+    self.locService.delegate = nil;
     [super viewWillDisappear:animated];
 }
 #pragma mark BMKLocationServiceDelegate  处理地图位置更新
@@ -129,6 +133,10 @@
         [self.searchAddressArray removeAllObjects];
         for(BMKPoiInfo *poiInfo in poiResult.poiInfoList)
         {
+            if (self.isFirstLocation) {
+                self.citySearchOption.city = poiInfo.city?poiInfo.city:@"北京市";
+            }
+            self.isFirstLocation = NO;
             MapPlace *place=[[MapPlace alloc]init];
             place.name=poiInfo.name;
             place.address=poiInfo.address;
@@ -273,7 +281,6 @@
     if (!_cityPoiSearch) {
         _cityPoiSearch = [[BMKPoiSearch alloc]init];
         _cityPoiSearch.delegate = self;
-        _citySearchOption.city = @"北京";
     }
     return _cityPoiSearch;
 }
@@ -282,6 +289,7 @@
 
     if (!_citySearchOption) {
         _citySearchOption = [[BMKCitySearchOption alloc]init];
+        _citySearchOption.city = @"北京";
     }
     return _citySearchOption;
 }
